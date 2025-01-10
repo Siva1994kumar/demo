@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the local .jar file to the container's /app directory
-COPY /target/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
+COPY /var/lib/jenkins/workspace/cicd-pipeline/target/demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
 
 # Expose the port that the application will run on (optional)
 EXPOSE 8080
