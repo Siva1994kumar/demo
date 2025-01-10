@@ -1,0 +1,22 @@
+---
+- name: Build and run Docker container
+  hosts: localhost
+  become: yes  # If you need root privileges to manage Docker
+  tasks:
+    - name: Build the Docker image
+      docker_image:
+        name: your-app
+        build:
+          path: /path/to/your/Dockerfile
+        state: present
+
+    - name: Start Docker container from image
+      docker_container:
+        name: your-app-container
+        image: your-app
+        state: started
+        restart_policy: always
+        exposed_ports:
+          - "8080"
+        published_ports:
+          - "8080:8080"
