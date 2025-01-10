@@ -7,7 +7,7 @@
       docker_image:
         name: your-app
         build:
-          path: /path/to/your/Dockerfile
+          path: /Dockerfile
         state: present
 
     - name: Start Docker container from image
