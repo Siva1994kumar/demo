@@ -1,6 +1,6 @@
 
    # Step 1: Use an official Maven image to build the project
-FROM maven:3.9.9-openjdk-17-slim AS build
+FROM maven:3.8.4-openjdk-17-slim AS build
 
 # Set the working directory inside the container
 WORKDIR /app
